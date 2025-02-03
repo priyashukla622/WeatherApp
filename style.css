@@ -7,25 +7,42 @@
 }
 body {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    background-image: url("https://static.vecteezy.com/system/resources/previews/026/186/529/non_2x/twillight-sky-blurred-background-ai-generated-photo.jpg");
+    background-size: cover;
     padding: 20px;
 }
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.header h1 {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    bottom: 20px;
+    display: inline-block; 
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 20px; 
 }
-.card {
+.card{
     width: 100%;
     max-width: 350px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px;
+    margin-right:30px;
     text-align: center;
     color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -47,6 +64,9 @@ body {
     flex: 1;
     font-size: 16px;
     color: white;
+}
+input::placeholder{
+    color:rgb(206, 121, 121);
 }
 .search button {
     background: white;
@@ -91,6 +111,13 @@ body {
     font-size: 16px;
     font-weight: bold;
 }
+.error {
+    display: none; 
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
 @media (max-width: 480px) {
     .card {
         width: 90%;

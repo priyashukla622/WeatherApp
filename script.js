@@ -8,7 +8,7 @@ const weatherIcon = document.querySelector(".weather-icon");
 function fetchWeather(city) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", apiurl + city + `&appid=${apikey}`, true);
+    xhr.open("GET", `${apiurl}${city}&appid=${apikey}`, true);
 
     xhr.onload = function () {
       if (xhr.status === 200) {
@@ -17,7 +17,6 @@ function fetchWeather(city) {
         reject("City not found!"); 
       }
     };
-
     xhr.onerror = function () {
       reject("Network error! Please try again."); 
     };
@@ -25,7 +24,6 @@ function fetchWeather(city) {
     xhr.send();
   });
 }
-
 function checkWeather(city) {
   fetchWeather(city)
     .then((data) => {
@@ -53,7 +51,14 @@ function checkWeather(city) {
       console.error(error);
     });
 }
-
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBox.value);
 });
+
+
+
+
+
+
+
+
