@@ -1,5 +1,4 @@
 # Weather WebApp
-
 This is a Weather WebApp that fetches and displays the current weather of a city based on user input. The app uses the OpenWeatherMap API to fetch weather data and displays the temperature, humidity, and weather condition along with an appropriate weather icon.
 
 
@@ -46,8 +45,6 @@ This is a Weather WebApp that fetches and displays the current weather of a city
   
 - **Challenge 2**: Handling invalid city names gracefully.
   - **Solution**: Implemented error handling to display an appropriate error message when the city is not found or if the API fails.
-
-
 
 ## Project Files
 - **index.html**: Contains the structure of the webpage.
