@@ -40,6 +40,8 @@ function checkWeather(city) {
 
       const iconCode = data.weather[0].icon;
       weatherIcon.src = `http://openweathermap.org/img/wn/${iconCode}.png`; 
+
+      console.log("Weather icon code:", iconCode);  
     })
     .catch((error) => {
       document.querySelector(".error").style.display = "block";
@@ -51,16 +53,8 @@ function checkWeather(city) {
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBox.value);
 });
-
 searchBox.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     checkWeather(searchBox.value);
   }
 });
-
-
-
-
-
-
-
